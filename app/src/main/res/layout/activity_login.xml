@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_splash"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="75dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/app_logo" />
+
+    <EditText
+        android:id="@+id/etUsername"
+        style="@style/et_login_register"
+        android:layout_marginTop="70dp"
+        android:hint="Username/email"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_marginTop="15dp"
+        style="@style/et_login_register"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_login"
+        android:elevation="5dp"
+        android:padding="0dp"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="@color/primaryLogin"
+        android:textSize="@dimen/app_default_text"
+        android:typeface="monospace" />
+
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/app_default_text" />
+</LinearLayout>

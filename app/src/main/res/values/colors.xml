@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--App colors-->
+    <color name="primaryLogin">#5113ec</color>
+    <color name="etHintsLogin">#8a83eb</color>
+    <color name="etBg">#997a45ff</color>
+    <color name="spinnerBg">#507a45ff</color>
+
+
+</resources>

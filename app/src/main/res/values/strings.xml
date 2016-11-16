@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RentBnB</string>
+    <string name="register_now">Don\'t have an account? <u>Register</u></string>
+    <string name="gender_prompt">Choose a gender</string>
+    <string-array name="gender_list">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+</resources>
