@@ -1,12 +1,14 @@
 package edu.wpi.rentbnb.datamodels;
 
+import java.io.Serializable;
+
 /**
  * Created by nikitalondhe on 11/16/16.<br/>
  * <br/>
  * This class stores the detailed mapping between tags and the apartments
  * associated with it.
  */
-public class ApartmentTags {
+public class ApartmentTags implements Serializable {
 	/**
 	 * Uniquely identifies the user.
 	 */

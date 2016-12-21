@@ -1,5 +1,7 @@
 package edu.wpi.rentbnb.datamodels;
 
+import java.io.Serializable;
+
 /**
  * Created by nikitalondhe on 11/16/16.<br/>
  * <br/>
@@ -7,7 +9,8 @@ package edu.wpi.rentbnb.datamodels;
  * locality, total number of rooms in the apartment and the tags associated with
  * the apartment.
  */
-public class Apartment {
+public class Apartment implements Serializable {
+
 	/**
 	 * Uniquely identifies the apartment.
 	 */

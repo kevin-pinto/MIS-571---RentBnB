@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/listingType"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/radiogrp_outline"
+        android:checkedButton="@+id/rbtnTenant"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbtnList"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/radiogrp_background"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="List"
+            android:textColor="@drawable/radiogrp_text_selector"
+            android:textSize="@dimen/app_default_text" />
+
+        <RadioButton
+            android:id="@+id/rbtnMap"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/radiogrp_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Map"
+            android:textColor="@drawable/radiogrp_text_selector"
+            android:textSize="@dimen/app_default_text" />
+    </RadioGroup>
+
+    <ViewFlipper
+        android:id="@+id/vfListings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/listingType">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp">
+
+            <ListView
+                android:id="@+id/lvListing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@null" />
+
+            <include
+                android:id="@+id/loadingview"
+                layout="@layout/include_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/filterView"
+                layout="@layout/include_filter"
+                android:layout_width="250dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:id="@+id/mfgListings"
+                class="com.google.android.gms.maps.MapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include
+                android:id="@+id/detailsRow"
+                layout="@layout/item_listing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="7dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </ViewFlipper>
+
+    <ImageView
+        android:id="@+id/ivFilterMain"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/listingType"
+        android:padding="5dp"
+        app:srcCompat="@mipmap/icon_filter" />
+
+</RelativeLayout>

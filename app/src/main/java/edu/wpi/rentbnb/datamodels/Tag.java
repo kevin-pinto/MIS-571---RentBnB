@@ -1,12 +1,14 @@
 package edu.wpi.rentbnb.datamodels;
 
+import java.io.Serializable;
+
 /**
  * Created by nikitalondhe on 11/16/16.<br/>
  * <br/>
  * This class contains a list of tags that can be associated with a user or the
  * apartment.
  */
-public class Tag {
+public class Tag implements Serializable {
 	/**
 	 * Uniquely identifies the tag id
 	 */
@@ -19,6 +21,15 @@ public class Tag {
 	 * Indicates the tag description
 	 */
 	private String description;
+
+	public Tag() {
+	}
+
+	public Tag(Integer id, String name, String description) {
+		this.description = description;
+		this.id = id;
+		this.name = name;
+	}
 
 	/**
 	 * Fetches the id

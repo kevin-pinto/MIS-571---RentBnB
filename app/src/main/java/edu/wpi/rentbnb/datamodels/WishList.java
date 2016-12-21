@@ -1,5 +1,6 @@
 package edu.wpi.rentbnb.datamodels;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -8,15 +9,19 @@ import java.util.Date;
  * This class saves all the rental spaces that have been marked as favorite by
  * the user and can be used for future reference.
  */
-public class WishList {
+public class WishList implements Serializable {
 	/**
-	 * Indicates the user id
+	 * Indicates the wishlist id
 	 */
 	private Integer id;
 	/**
 	 * Indicates the rental space id
 	 */
 	private Integer rentalId;
+	/**
+	 * Indicates the users id
+	 */
+	private Integer userId;
 	/**
 	 * Indicates the comments for the apartments
 	 */
@@ -56,6 +61,22 @@ public class WishList {
 	 */
 	public void setRentalId(Integer rentalId) {
 		this.rentalId = rentalId;
+	}
+
+	/**
+	 * Fetches the userId
+	 *
+	 * @return userId
+	 */
+	public Integer getUserId() {
+		return userId;
+	}
+
+	/**
+	 * Sets the userId
+	 */
+	public void setUserId(Integer userId) {
+		this.userId = userId;
 	}
 
 	/**

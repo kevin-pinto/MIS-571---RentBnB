@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:background="@color/common_signin_btn_dark_text_disabled"
+    android:orientation="vertical"
+    android:padding="7dp">
+
+    <TextView
+        android:id="@+id/tvTagsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select tags"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/app_default_small_text" />
+
+    <GridView
+        android:id="@+id/gridTags"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvTagsTitle"
+        android:columnWidth="115dp"
+        android:gravity="left"
+        android:numColumns="2"
+        android:stretchMode="spacingWidthUniform" />
+
+    <TextView
+        android:id="@+id/tvPriceTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gridTags"
+        android:layout_marginTop="10dp"
+        android:text="Price Range"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/app_default_small_text" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvPriceTitle"
+        android:layout_alignBottom="@+id/tvPriceTitle"
+        android:layout_alignParentRight="true"
+        android:text="$100 - $900"
+        android:textSize="@dimen/app_default_text" />
+
+    <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+        android:id="@+id/rsPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPriceTitle"
+        android:layout_marginTop="2dp"
+        app:bar_color="@android:color/black"
+        app:bar_highlight_color="@android:color/holo_blue_bright"
+        app:corner_radius="10"
+        app:left_thumb_color="@color/colorAccent"
+        app:left_thumb_color_pressed="@color/common_signin_btn_default_background"
+        app:max_value="50"
+        app:min_value="10"
+        app:right_thumb_color="@color/colorAccent"
+        app:right_thumb_color_pressed="@color/common_signin_btn_default_background"
+        app:steps="5" />
+
+    <TextView
+        android:id="@+id/tvDateTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rsPrice"
+        android:layout_marginTop="10dp"
+        android:text="Date Range"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/app_default_small_text" />
+
+    <TextView
+        android:id="@+id/tvFromDate"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDateTitle"
+        android:drawableRight="@mipmap/ic_calender"
+        android:hint="From date"
+        android:inputType="date"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/app_default_small_text" />
+
+    <TextView
+        android:id="@+id/tvToDate"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvFromDate"
+        android:layout_alignBottom="@+id/tvFromDate"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:drawableRight="@mipmap/ic_calender"
+        android:hint="To date"
+        android:inputType="date"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/app_default_small_text" />
+
+    <Button
+        android:id="@+id/btnDoFilter"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/tvToDate"
+        android:layout_margin="7dp"
+        android:background="@drawable/btn_login"
+        android:elevation="5dp"
+        android:padding="0dp"
+        android:text="Filter"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/app_default_text"
+        android:typeface="monospace" />
+</RelativeLayout>

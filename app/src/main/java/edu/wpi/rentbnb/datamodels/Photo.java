@@ -1,12 +1,16 @@
 package edu.wpi.rentbnb.datamodels;
 
+import java.io.Serializable;
+
+import android.graphics.Bitmap;
+
 /**
  * Created by nikitalondhe on 11/16/16.<br/>
  * <br/>
  * This class contains a list of pictures of the rental spaces the have been
  * uploaded by the Leaser.
  */
-public class Photo {
+public class Photo implements Serializable {
 	/**
 	 * Uniquely identifies the picture id
 	 */
@@ -18,11 +22,18 @@ public class Photo {
 	/**
 	 * Indicates the picture data
 	 */
-	private byte[] data;
+	private transient Bitmap data;
 	/**
 	 * Indicates the picture description
 	 */
 	private String description;
+
+	public Photo(Integer id, Integer rentalId, Bitmap data, String description) {
+		this.data = data;
+		this.description = description;
+		this.id = id;
+		this.rentalId = rentalId;
+	}
 
 	/**
 	 * Fetches the id
@@ -61,14 +72,14 @@ public class Photo {
 	 *
 	 * @return data
 	 */
-	public byte[] getData() {
+	public Bitmap getData() {
 		return data;
 	}
 
 	/**
 	 * Sets the data
 	 */
-	public void setData(byte[] data) {
+	public void setData(Bitmap data) {
 		this.data = data;
 	}
 

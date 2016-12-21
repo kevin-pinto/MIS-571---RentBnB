@@ -14,4 +14,15 @@ public enum UserType {
 	public String getUserType() {
 		return type;
 	}
+
+	public UserType fromString(String text) {
+		if (text != null) {
+			for (UserType b : UserType.values()) {
+				if (text.equalsIgnoreCase(type)) {
+					return b;
+				}
+			}
+		}
+		return null;
+	}
 }

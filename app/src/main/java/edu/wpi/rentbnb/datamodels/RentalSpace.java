@@ -1,5 +1,6 @@
 package edu.wpi.rentbnb.datamodels;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -8,7 +9,7 @@ import java.util.Date;
  * This class contains a lower level detailed information regarding rooms within
  * an apartment up for sale.
  */
-public class RentalSpace {
+public class RentalSpace implements Serializable {
 	/**
 	 * Uniquely identifies the rental space
 	 */

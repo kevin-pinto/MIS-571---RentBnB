@@ -1,5 +1,6 @@
 package edu.wpi.rentbnb.datamodels;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -10,7 +11,7 @@ import java.util.Date;
  * be a Tenant or a Leaser. These details are captured while registering a user
  * on the application for the first time.
  */
-public class User {
+public class User implements Serializable {
 	/**
 	 * Uniquely identifies the user
 	 */
@@ -38,7 +39,7 @@ public class User {
 	/**
 	 * Indicates the phone number of the user
 	 */
-	private Integer phoneNumber;
+	private String phoneNumber;
 	/**
 	 * Indicates the email id of the user
 	 */
@@ -153,14 +154,14 @@ public class User {
 	 *
 	 * @return phoneNumber
 	 */
-	public Integer getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
 	/**
 	 * Sets the phoneNumber
 	 */
-	public void setPhoneNumber(Integer phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 

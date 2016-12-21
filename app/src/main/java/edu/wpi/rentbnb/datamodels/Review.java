@@ -1,14 +1,15 @@
 package edu.wpi.rentbnb.datamodels;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by nikitalondhe on 11/16/16.<br/>
  * <br/>
- * This table contains a list of review submitted by the users regarding the
+ * This class contains a list of review submitted by the users regarding the
  * rental spaces that have been previously visited/rented.
  */
-public class Review {
+public class Review implements Serializable {
 	/**
 	 * Uniquely identifies the review id
 	 */
@@ -21,6 +22,10 @@ public class Review {
 	 * Indicates the user id
 	 */
 	private Integer userId;
+	/**
+	 * Indicates the user name
+	 */
+	private String userName;
 	/**
 	 * Indicates the review comments for the apartment listing
 	 */
@@ -38,6 +43,17 @@ public class Review {
 	 * listing
 	 */
 	private Date creationDate;
+
+	public Review() {
+	}
+
+	public Review(String comments, Date creationDate, Integer rating, String userName, boolean wouldRecommend) {
+		this.comments = comments;
+		this.creationDate = creationDate;
+		this.rating = rating;
+		this.userName = userName;
+		this.wouldRecommend = wouldRecommend;
+	}
 
 	/**
 	 * Fetches the id
@@ -85,6 +101,22 @@ public class Review {
 	 */
 	public void setUserId(Integer userId) {
 		this.userId = userId;
+	}
+
+	/**
+	 * Fetches the userName
+	 *
+	 * @return userName
+	 */
+	public String getUserName() {
+		return userName;
+	}
+
+	/**
+	 * Sets the userName
+	 */
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	/**
@@ -153,7 +185,7 @@ public class Review {
 
 	@Override
 	public String toString() {
-		return "Review{" + "id=" + id + ", rentalId=" + rentalId + ", userId=" + userId + ", comments='" + comments + '\'' + ", rating=" + rating + ", wouldRecommend=" + wouldRecommend
-				+ ", creationDate=" + creationDate + '}';
+		return "Review{" + "comments='" + comments + '\'' + ", id=" + id + ", rentalId=" + rentalId + ", userId=" + userId + ", userName=" + userName + ", rating=" + rating + ", wouldRecommend="
+				+ wouldRecommend + ", creationDate=" + creationDate + '}';
 	}
 }
