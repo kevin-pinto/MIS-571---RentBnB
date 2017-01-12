@@ -3,6 +3,10 @@
     package="edu.wpi.rentbnb">
 
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +17,6 @@
         <activity
             android:name=".activities.SplashActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,7 +29,26 @@
         <activity
             android:name=".activities.RegistrationActivity"
             android:label="Register" />
-        <activity android:name=".BaseActivity"></activity>
+        <activity
+            android:name=".activities.ReviewActivity"
+            android:label="@string/title_activity_review" />
+        <activity
+            android:name=".activities.RentalListingActivity"
+            android:label="@string/title_activity_rental_listing" />
+        <activity
+            android:name=".activities.RentalListingDetailActivity"
+            android:label="@string/title_activity_rental_listing_detail" />
+        <activity
+            android:name=".activities.WishlistActivity"
+            android:label="Wishlist" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_api_key" />
+
     </application>
 
 </manifest>

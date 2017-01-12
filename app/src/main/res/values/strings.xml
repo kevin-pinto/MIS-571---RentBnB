@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">RentBnB</string>
+    <string name="google_api_key">AIzaSyBaaxB20HUxKOlMqYgMcj_4R0B5Vb1YZPg</string>
     <string name="register_now">Don\'t have an account? <u>Register</u></string>
     <string name="gender_prompt">Choose a gender</string>
     <string-array name="gender_list">
@@ -7,4 +8,7 @@
         <item>Female</item>
         <item>Other</item>
     </string-array>
+    <string name="title_activity_review">Review</string>
+    <string name="title_activity_rental_listing">Listings</string>
+    <string name="title_activity_rental_listing_detail">Listing Detail</string>
 </resources>

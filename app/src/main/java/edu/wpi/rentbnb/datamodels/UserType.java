@@ -1,18 +1,24 @@
 package edu.wpi.rentbnb.datamodels;
-
-/**
- * Created by nikitalondhe on 11/16/16.
- */
-
 public enum UserType {
-LANDLORD ("L"), TENANT("T");
+	LANDLORD("L"), TENANT("T");
+	private String type;
 
-    private String type;
+	UserType(String type) {
+		this.type = type;
+	}
 
-    UserType(String type){this.type = type;
-    }
-    public String getUserType(){
-        return type;
-    }
+	public String getUserType() {
+		return type;
+	}
 
+	public UserType fromString(String text) {
+		if (text != null) {
+			for (UserType b : UserType.values()) {
+				if (text.equalsIgnoreCase(type)) {
+					return b;
+				}
+			}
+		}
+		return null;
+	}
 }

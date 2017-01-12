@@ -8,6 +8,14 @@
     <color name="etHintsLogin">#8a83eb</color>
     <color name="etBg">#997a45ff</color>
     <color name="spinnerBg">#507a45ff</color>
+    <!-- BACKGROUND COLORS -->
+    <color name="bg_light_grey">#eaeaea</color>
+    <color name="bg_light_blue">#af0000ff</color>
 
+    <!-- TEXT COLORS -->
+    <color name="text_dark_grey">#454545</color>
+    <color name="text_light_grey">#858585</color>
+    <color name="common_signin_btn_dark_text_disabled">#FFAAAAAA</color>
+    <color name="common_signin_btn_default_background">#FFDD4B39</color>
 
 </resources>

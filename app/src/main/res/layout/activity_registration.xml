@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/bg_splash"
@@ -122,6 +121,15 @@
             android:inputType="date" />
 
         <EditText
+            android:id="@+id/etPhone"
+            style="@style/et_login_register"
+            android:layout_marginTop="10dp"
+            android:digits="0123456789"
+            android:hint="Phone number"
+            android:inputType="phone"
+            android:maxLength="10" />
+
+        <EditText
             android:id="@+id/etEmail"
             style="@style/et_login_register"
             android:layout_marginTop="10dp"
@@ -129,11 +137,13 @@
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/etPhone"
+            android:id="@+id/etPass"
             style="@style/et_login_register"
             android:layout_marginTop="10dp"
-            android:hint="Phone number"
-            android:inputType="phone" />
+            android:drawableRight="@mipmap/icon_invisible"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
     </LinearLayout>
 
     <Button
@@ -143,7 +153,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/btn_login"
         android:elevation="5dp"
         android:padding="0dp"

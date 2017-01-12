@@ -18,4 +18,62 @@
         <item name="android:textColorHint">@color/etHintsLogin</item>
         <item name="android:textSize">@dimen/app_default_text</item>
     </style>
+
+    <style name="tv_sub_title_light">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/primaryLogin</item>
+        <item name="android:textSize">@dimen/app_default_small_text</item>
+    </style>
+
+    <style name="iv_rental_listing">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_marginRight">3dp</item>
+        <item name="android:padding">1dp</item>
+    </style>
+
+    <style name="tv_rental_listing">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/secondary_text_dark</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:textSize">@dimen/app_default_small_text</item>
+    </style>
+
+    <style name="ll_vertical">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="ll_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="tv_desc_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/app_default_text</item>
+    </style>
+
+    <style name="tv_title_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:textSize">@dimen/app_default_subtitle</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
